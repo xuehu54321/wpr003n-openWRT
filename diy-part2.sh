@@ -13,8 +13,15 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.26.1/g' package/base-files/files/bin/config_generate
 
-# Modify default theme
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
-# Modify hostname
-#sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+
+git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
+git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice
+git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
+
+
+git clone https://github.com/derisamedia/luci-theme-alpha.git package/luci-theme-alpha
+
+
+git clone https://github.com/tty228/luci-app-nodogsplash.git package/luci-app-nodogsplash
